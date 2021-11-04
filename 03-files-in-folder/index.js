@@ -7,11 +7,11 @@ fs.readdir(
     withFileTypes: true,
   },
   (err, files) => {
-    for (var i = 0; i < files.length; i++) {
+    for (let i = 0; i < files.length; i++) {
       if (files[i].isFile()) {
         for (let key in files[i]) {
           // console.log(files[i][key]);
-          var file = answer + "/" + files[i][key];
+          let file = answer + "/" + files[i][key];
           fs.stat(file, callback(file));
         }
       }
